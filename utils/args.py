@@ -3,9 +3,11 @@ from configs.defaults import _C as cfg_default
 
 def get_args():
     parser = argparse.ArgumentParser()
-    #parser.add_argument("--root", type=str, default="../DGDATA/", help="path to dataset")
-    parser.add_argument("--root", type=str, default="../data/FundusDG", help="path to dataset")
-    
+    # parser.add_argument("--root", type=str, default="../DGDATA/", help="path to dataset")
+    # parser.add_argument("--root", type=str, default="../data/FundusDG", help="path to dataset")
+    parser.add_argument("--root", type=str,
+                        default="GDRBench", help="path to dataset")
+
     parser.add_argument("--algorithm", type=str, default='GDRNet', help='check in algorithms.py')
     parser.add_argument("--backbone", type=str, default="resnet50")
     parser.add_argument("--source-domains", type=str, nargs="+", help="source domains for DGDR")

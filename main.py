@@ -44,7 +44,7 @@ if __name__ == "__main__":
             if val_auc > best_performance and epoch > cfg.EPOCHS * 0.3:
                 best_performance = val_auc
                 algorithm.save_model(log_path)
-    
+    # The following code is for the prediction phase. If you want to view the results, you will need to write your own code to do so.
     algorithm.renew_model(log_path)
     _, test_auc = algorithm.validate(val_loader, test_loader, writer)
     os.mknod(os.path.join(log_path, 'done'))

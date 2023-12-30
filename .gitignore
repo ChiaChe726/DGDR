@@ -142,3 +142,7 @@ dmypy.json
 .pyre/
 
 *.pdf
+
+GDRBench/images
+GDRBench/masks
+output

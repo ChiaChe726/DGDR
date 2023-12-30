@@ -19,6 +19,7 @@ def algorithm_validate(algorithm, data_loader, writer, epoch, val_type):
             label = label.cuda().long()
 
             output = algorithm.predict(image)
+
             loss += criterion(output, label).item()
 
             _, pred = torch.max(output, 1)
